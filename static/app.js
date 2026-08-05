@@ -1,0 +1,1 @@
+const input=document.getElementById("resume");const fileName=document.getElementById("fileName");if(input){input.addEventListener("change",()=>{fileName.textContent=input.files[0]?input.files[0].name:"Maximum file size: 10 MB";});}

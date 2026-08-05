@@ -1,0 +1,6 @@
+{% extends "base.html" %}{% block content %}<div class="result-top"><div><h1>Your Resume Report</h1><p>Rule-based analysis for learning and improvement.</p></div><div class="gauge" style="--score:{{r.score}}"><b>{{r.score}}%</b><span>ATS score</span></div></div>
+<div class="grid two"><article class="card"><h2>Detected skills</h2><div class="tags">{% for x in r.skills %}<span>{{x}}</span>{% else %}<em>No mapped skills found.</em>{% endfor %}</div></article>
+<article class="card"><h2>Missing skills</h2><div class="tags missing">{% for x in r.missing %}<span>{{x}}</span>{% else %}<em>No major gaps for the suggested role.</em>{% endfor %}</div></article></div>
+<div class="grid two"><article class="card"><h2>Recommended job</h2><h3>{{r.job}}</h3><p>Based on overlap between detected skills and the included role profiles.</p></article><article class="card"><h2>Suggested courses</h2><ul>{% for x in r.courses %}<li>{{x}}</li>{% else %}<li>Review the missing skills above and choose a course for each.</li>{% endfor %}</ul></article></div>
+<article class="card"><h2>Interview questions</h2><ol>{% for q in r.questions %}<li>{{q}}</li>{% endfor %}</ol></article>
+<details class="card"><summary>View extracted resume text</summary><pre>{{r.text}}</pre></details><a class="btn" href="/dashboard">Analyze another resume</a>{% endblock %}

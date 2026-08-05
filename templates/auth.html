@@ -1,0 +1,3 @@
+{% extends "base.html" %}{% block content %}<div class="auth card"><h1>{{ "Create account" if mode=="register" else "Welcome back" }}</h1>
+<form method="post"><label>Name{% if mode=="register" %}<input name="name" required>{% endif %}</label><label>Email<input type="email" name="email" required></label><label>Password<input type="password" name="password" required minlength="6"></label><button class="btn">{{ "Register" if mode=="register" else "Login" }}</button></form>
+<p>{% if mode=="register" %}Already registered? <a href="/login">Login</a>{% else %}New here? <a href="/register">Create an account</a>{% endif %}</p></div>{% endblock %}
