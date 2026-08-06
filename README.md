@@ -42,6 +42,9 @@ This is a working student-project MVP. The ATS score is a transparent rule-based
 <<<<<<< HEAD
 AI-powered resume builder and analyze
 >>>>>>> 60f7995ef24101607c11d7bbf50dd2394d330bc7
+
+
+
 =======
 An AI-powered resume analyzer web application
 >>>>>>> 82dbd1c0f9192598813d445aaafda176e685f3a7
